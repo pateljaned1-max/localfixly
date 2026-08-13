@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LocalFix — Local Service Finder & Booking Platform</title>
+  <meta name="description" content="Find trusted local plumbers, electricians, cleaners, mechanics and service professionals near you in under 90 seconds." />
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="nav-container">
+        <div class="brand-logo" onclick="window.location.hash='#/'">
+          <i class="fas fa-wrench" style="color:var(--primary);"></i>
+          Local<span>Fix</span>
+          <span class="brand-badge">v1.0 MVP</span>
+        </div>
+
+        <ul id="nav-links" class="nav-links">
+          <!-- Populated dynamically by app.js -->
+        </ul>
+
+        <div id="nav-actions" class="nav-actions">
+          <!-- Auth buttons populated dynamically -->
+        </div>
+      </div>
+    </header>
+
+    <!-- Main View Container -->
+    <main id="main-content">
+      <div style="text-align:center;padding:4rem;">
+        <i class="fas fa-spinner fa-spin fa-2x" style="color:var(--primary);"></i>
+        <p style="margin-top:1rem;color:var(--text-muted);">Loading LocalFix...</p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div>
+          <div class="brand-logo" style="color:white;margin-bottom:1rem;">
+            <i class="fas fa-wrench" style="color:#60a5fa;"></i> Local<span style="color:white;">Fix</span>
+          </div>
+          <p style="font-size:0.85rem;line-height:1.6;">
+            LocalFix is a local service finder and booking platform connecting customers with nearby verified service providers in under 90 seconds.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Popular Services</h4>
+          <ul class="footer-links">
+            <li><a href="#/search?category=plumber">Plumber Services</a></li>
+            <li><a href="#/search?category=electrician">Electrician Services</a></li>
+            <li><a href="#/search?category=cleaner">Home Cleaning</a></li>
+            <li><a href="#/search?category=ac-repair">AC Repair & Service</a></li>
+            <li><a href="#/search?category=carpenter">Carpentry & Locksmith</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#/how-it-works">How It Works</a></li>
+            <li><a href="#/about">About Us</a></li>
+            <li><a href="#/signup">Become a Provider</a></li>
+            <li><a href="#/terms">Terms of Service</a></li>
+            <li><a href="#/privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact & Support</h4>
+          <ul class="footer-links">
+            <li><i class="fas fa-envelope"></i> support@localfix.app</li>
+            <li><i class="fas fa-phone"></i> +1 (800) 555-FIXIT</li>
+            <li><i class="fas fa-map-marker-alt"></i> Central Metro Hub, City</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 LocalFix Inc. All rights reserved. Built with high performance & verified provider security.
+      </div>
+    </footer>
+  </div>
+
+  <!-- Leaflet Map JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <!-- LocalFix API & Router Scripts -->
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

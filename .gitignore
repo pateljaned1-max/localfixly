@@ -1,0 +1,19 @@
+# Environments & Secrets
+.env
+.env.local
+*.env
+
+# Python & Databases
+__pycache__/
+*.pyc
+*.pyo
+*.db
+*.sqlite
+*.sqlite3
+localfix.db
+
+# Logs & System
+*.log
+.vscode/
+.idea/
+.DS_Store
